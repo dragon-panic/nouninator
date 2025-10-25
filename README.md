@@ -4,31 +4,6 @@
 
 Nouninator is a Rust CLI tool and server that automatically generates type-safe GraphQL APIs from Databricks Unity Catalog Delta tables.
 
-## Prerequisites
-
-
-### Native Build Tools (Optional - Only for Cloud Features)
-
-**NOT needed for:**
-- ✅ Base build (local development with Delta tables)
-
-**Only needed when building with cloud storage features** (`s3`, `azure`, `gcs`):
-
-**Windows:**
-- [CMake](https://cmake.org/download/)
-- [NASM](https://www.nasm.us/)
-- Visual Studio Build Tools with C++
-
-**Ubuntu/Debian:**
-```bash
-sudo apt-get install cmake nasm build-essential
-```
-
-**macOS:**
-```bash
-brew install cmake nasm
-```
-
 ## Quick Start
 
 ### Try It Now (No Databricks Needed!)
@@ -111,6 +86,28 @@ cargo build --release --features all-clouds
 ```
 
 💡 **Tip:** Start with Option A for development, then use Option B/C/D for production.
+
+#### Native Build Tools (Optional - Only for Cloud Features)
+
+**NOT needed for:**
+- ✅ Base build (local development with Delta tables)
+
+**Only needed when building with cloud storage features** (`s3`, `azure`, `gcs`):
+
+**Windows:**
+- [CMake](https://cmake.org/download/)
+- [NASM](https://www.nasm.us/)
+- Visual Studio Build Tools with C++
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install cmake nasm build-essential
+```
+
+**macOS:**
+```bash
+brew install cmake nasm
+```
 
 ### Step 2: Generate Configuration
 
