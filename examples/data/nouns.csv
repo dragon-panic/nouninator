@@ -1,0 +1,12 @@
+noun_id,word,type,definition,example_usage,frequency_rank,created_at
+1,cat,common,A small domesticated carnivorous mammal,"The cat sat on the mat",245,2024-01-15T10:00:00Z
+2,freedom,abstract,The power or right to act or speak freely,"Freedom of speech is a fundamental right",892,2024-01-15T10:01:00Z
+3,London,proper,Capital city of the United Kingdom,"She moved to London last year",156,2024-01-15T10:02:00Z
+4,happiness,abstract,The state of being happy,"Money can't buy happiness",1203,2024-01-15T10:03:00Z
+5,mountain,common,A large natural elevation of the earth's surface,"They climbed the mountain at dawn",678,2024-01-15T10:04:00Z
+6,Einstein,proper,Albert Einstein - theoretical physicist,"Einstein developed the theory of relativity",2341,2024-01-15T10:05:00Z
+7,democracy,abstract,Government by the people,"Democracy requires active participation",1567,2024-01-15T10:06:00Z
+8,table,common,A piece of furniture with a flat top,"Put the book on the table",423,2024-01-15T10:07:00Z
+9,courage,abstract,The ability to do something frightening,"It takes courage to speak the truth",1891,2024-01-15T10:08:00Z
+10,river,common,A large natural stream of water,"The river flows to the sea",534,2024-01-15T10:09:00Z
+

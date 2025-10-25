@@ -1,0 +1,94 @@
+[package]
+name = "nouninator"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dragon R. Sky <dragon@cryptopanic.org"]
+description = "Turn Delta tables into GraphQL APIs"
+license = "MIT"
+repository = "https://github.com/dragon-panic/nouninator"
+readme = "README.md"
+
+[dependencies]
+# GraphQL Server
+async-graphql = { version = "7.0", features = ["dynamic-schema"] }
+async-graphql-axum = { version = "7.0" }
+
+# Web Framework
+axum = { version = "0.7" }
+tower = { version = "0.5" }
+tower-http = { version = "0.6", features = ["cors"] }
+
+# Delta Lake & Query Engine
+# Using default-features = false to avoid pulling in all cloud providers by default
+deltalake = { version = "0.19", default-features = false, features = ["datafusion"] }
+datafusion = { version = "41.0" }
+
+# Arrow
+arrow = { version = "53.0" }
+arrow-schema = { version = "53.0" }
+arrow-csv = { version = "53.0" }
+
+# HTTP Client (Unity Catalog API)
+reqwest = { version = "0.12", features = ["json"] }
+
+# Async Runtime
+tokio = { version = "1.40", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Configuration
+config = "0.14"
+toml = "0.8"
+
+# CLI
+clap = { version = "4.5", features = ["derive"] }
+
+# Error Handling
+anyhow = "1.0"
+thiserror = "2.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Utilities
+indexmap = "2.0"
+chrono = "0.4"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3.8"
+
+[[bin]]
+name = "nouninator"
+path = "src/main.rs"
+
+[lib]
+name = "nouninator"
+path = "src/lib.rs"
+
+[features]
+default = []
+
+# Individual cloud storage providers (can be combined)
+# Each adds native dependencies (CMake, NASM) due to cloud SDKs
+
+# AWS S3 support (for AWS Databricks deployments)
+s3 = ["deltalake/s3"]
+
+# Azure Blob Storage support (for Azure Databricks deployments)
+azure = ["deltalake/azure"]
+
+# Google Cloud Storage support (for GCP Databricks deployments)
+gcs = ["deltalake/gcs"]
+
+# Convenience feature: all cloud providers
+all-clouds = ["s3", "azure", "gcs"]
+
+# Multi-cloud combinations (for users who need specific pairs)
+aws-azure = ["s3", "azure"]
+aws-gcp = ["s3", "gcs"]
+azure-gcp = ["azure", "gcs"]
+

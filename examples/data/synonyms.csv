@@ -1,0 +1,12 @@
+id,word1,word2,similarity_score,context,created_at
+1,happy,joyful,0.92,general,2024-01-15T10:00:00Z
+2,big,large,0.95,size,2024-01-15T10:01:00Z
+3,smart,intelligent,0.89,mental ability,2024-01-15T10:02:00Z
+4,fast,quick,0.93,speed,2024-01-15T10:03:00Z
+5,beautiful,gorgeous,0.88,appearance,2024-01-15T10:04:00Z
+6,angry,furious,0.91,emotion,2024-01-15T10:05:00Z
+7,sad,melancholy,0.85,emotion,2024-01-15T10:06:00Z
+8,begin,start,0.96,action,2024-01-15T10:07:00Z
+9,end,finish,0.94,action,2024-01-15T10:08:00Z
+10,brave,courageous,0.90,personality,2024-01-15T10:09:00Z
+

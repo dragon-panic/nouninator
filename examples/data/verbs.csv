@@ -1,0 +1,12 @@
+verb_id,word,tense,type,definition,example_usage,transitivity,frequency_rank,created_at
+1,run,base,action,To move at a speed faster than walking,"She can run very fast",intransitive,89,2024-01-15T10:00:00Z
+2,think,base,mental,To have a particular opinion or belief,"I think it will rain tomorrow",transitive,45,2024-01-15T10:01:00Z
+3,be,base,linking,To exist or occur,"To be or not to be",linking,1,2024-01-15T10:02:00Z
+4,write,base,action,To mark letters or words on a surface,"He likes to write poetry",transitive,234,2024-01-15T10:03:00Z
+5,become,base,linking,To begin to be something,"She will become a doctor",linking,67,2024-01-15T10:04:00Z
+6,jump,base,action,To push oneself off the ground,"The cat can jump very high",intransitive,456,2024-01-15T10:05:00Z
+7,understand,base,mental,To perceive the meaning of something,"Do you understand the question?",transitive,123,2024-01-15T10:06:00Z
+8,seem,base,linking,To give the impression of being,"She seems happy today",linking,178,2024-01-15T10:07:00Z
+9,create,base,action,To bring something into existence,"Artists create beauty",transitive,345,2024-01-15T10:08:00Z
+10,feel,base,mental,To be aware of through touch or emotion,"I feel the warmth of the sun",transitive,98,2024-01-15T10:09:00Z
+

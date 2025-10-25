@@ -1,0 +1,26 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config files (may contain sensitive data)
+nouninator.toml
+nouninator.example.toml
+*.toml.bak
+
+# Generated Delta tables (from example data)
+examples/delta/
+
+# Logs
+*.log
+

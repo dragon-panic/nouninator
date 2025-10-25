@@ -1,0 +1,12 @@
+word_id,word,part_of_speech,frequency_per_million,corpus,rank,last_updated
+1,the,article,69971,brown_corpus,1,2024-01-15T10:00:00Z
+2,be,verb,39175,brown_corpus,2,2024-01-15T10:01:00Z
+3,to,preposition,26149,brown_corpus,3,2024-01-15T10:02:00Z
+4,of,preposition,26005,brown_corpus,4,2024-01-15T10:03:00Z
+5,and,conjunction,25980,brown_corpus,5,2024-01-15T10:04:00Z
+6,a,article,21626,brown_corpus,6,2024-01-15T10:05:00Z
+7,in,preposition,18214,brown_corpus,7,2024-01-15T10:06:00Z
+8,that,determiner,11290,brown_corpus,8,2024-01-15T10:07:00Z
+9,have,verb,10139,brown_corpus,9,2024-01-15T10:08:00Z
+10,it,pronoun,9559,brown_corpus,10,2024-01-15T10:09:00Z
+

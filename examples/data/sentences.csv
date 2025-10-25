@@ -1,0 +1,12 @@
+sentence_id,text,type,complexity,subject,predicate,word_count,created_at
+1,The cat sat on the mat.,declarative,simple,The cat,sat on the mat,6,2024-01-15T10:00:00Z
+2,What time is it?,interrogative,simple,it,is,4,2024-01-15T10:01:00Z
+3,Close the door!,imperative,simple,you (implied),close the door,3,2024-01-15T10:02:00Z
+4,How beautiful the sunset is!,exclamatory,simple,the sunset,is beautiful,5,2024-01-15T10:03:00Z
+5,"Although it was raining, they went for a walk.",declarative,complex,they,went for a walk,9,2024-01-15T10:04:00Z
+6,She loves reading and he enjoys writing.,declarative,compound,She and he,loves reading and enjoys writing,7,2024-01-15T10:05:00Z
+7,The book that I borrowed was fascinating.,declarative,complex,The book,was fascinating,7,2024-01-15T10:06:00Z
+8,Stop!,imperative,simple,you (implied),stop,1,2024-01-15T10:07:00Z
+9,"If you study hard, you will succeed.",declarative,complex,you,will succeed,7,2024-01-15T10:08:00Z
+10,"The teacher explained the lesson clearly, and the students understood it well.",declarative,compound-complex,The teacher and the students,explained and understood,13,2024-01-15T10:09:00Z
+

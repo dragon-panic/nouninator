@@ -1,0 +1,12 @@
+adjective_id,word,degree,type,definition,example_usage,frequency_rank,created_at
+1,happy,positive,emotion,Feeling or showing pleasure,"She was happy to see her friend",234,2024-01-15T10:00:00Z
+2,happier,comparative,emotion,More happy than another,"He is happier now than before",1245,2024-01-15T10:01:00Z
+3,happiest,superlative,emotion,Most happy,"This is the happiest day of my life",2156,2024-01-15T10:02:00Z
+4,big,positive,size,Of considerable size or extent,"The big house on the hill",156,2024-01-15T10:03:00Z
+5,bigger,comparative,size,Larger in size,"My dog is bigger than yours",876,2024-01-15T10:04:00Z
+6,biggest,superlative,size,Largest,"The biggest tree in the forest",1432,2024-01-15T10:05:00Z
+7,beautiful,positive,quality,Pleasing to the senses,"What a beautiful sunset",567,2024-01-15T10:06:00Z
+8,quick,positive,speed,Moving fast or doing something rapidly,"A quick response",423,2024-01-15T10:07:00Z
+9,intelligent,positive,mental,Having good understanding or judgment,"She is an intelligent student",789,2024-01-15T10:08:00Z
+10,ancient,positive,time,Belonging to the very distant past,"Ancient civilizations",1567,2024-01-15T10:09:00Z
+
