@@ -290,51 +290,6 @@ cargo build --release --features azure,gcs   # Azure + GCP
 cargo build --release --features all-clouds
 ```
 
-### Why Cloud Features?
-
-- **Faster Development:** Build without CMake/NASM (base build has everything you need for local dev)
-- **Smaller Binaries:** Include only the clouds you use
-- **Faster Builds:** Skip unused cloud SDKs
-- **Better Security:** Minimize unused code
-
-📖 **[Quick Reference Guide](FEATURES_SUMMARY.md)** - Commands and decision tree  
-📖 **[Cloud Provider Details](CLOUD_FEATURES.md)** - Authentication, troubleshooting  
-📖 **[Technical Rationale](CLOUD_OPTIMIZATION.md)** - Why we built it this way
-
-## Phase 1 Implementation Details
-
-### Completed Modules
-
-#### Error Handling (`src/error.rs`)
-- Comprehensive error types using `thiserror`
-- Handles Unity Catalog API errors, network errors, config errors, etc.
-- Type-safe `Result<T>` wrapper
-
-#### Configuration (`src/config/`)
-- TOML-based configuration
-- Validation for table names (catalog.schema.table format)
-- GraphQL name validation (PascalCase, alphanumeric)
-- Load and save functionality with error handling
-
-#### Unity Catalog Client (`src/unity/`)
-- HTTP client for Databricks Unity Catalog API
-- Table listing and metadata retrieval
-- Entity discovery with automatic primary key inference
-- Snake_case to PascalCase conversion for GraphQL types
-
-#### CLI (`src/cli/`)
-- `init` command: Discovers tables from Unity Catalog or generates example with local Delta tables ✅
-- `serve` command: Start GraphQL server ✅
-- Proper error handling and logging ✅
-
-#### Schema Generation (`src/schema/`) ✅
-- Arrow to GraphQL type mapping with custom scalars
-- Dynamic schema builder using async-graphql
-- Object type generation from table schemas
-- Query resolver creation (get by ID, list with pagination)
-- RecordBatch to GraphQL Value conversion
-- Support for all primitive types and timestamps
-
 ## Authentication
 
 Nouninator reads the Databricks token from the `DATABRICKS_TOKEN` environment variable:
@@ -342,42 +297,6 @@ Nouninator reads the Databricks token from the `DATABRICKS_TOKEN` environment va
 ```bash
 export DATABRICKS_TOKEN="dapi..."
 ```
-
-## Roadmap
-
-### ✅ Phase 2: Schema Generation (COMPLETE)
-- ✅ Arrow → GraphQL type mapping
-- ✅ Dynamic schema builder with async-graphql
-- ✅ Custom scalars (Date, DateTime)
-- ✅ ID type inference for `*_id` fields
-- ✅ Object type generation from Arrow schemas
-
-### ✅ Phase 3: Query Resolution (COMPLETE)
-- ✅ DataFusion integration for SQL queries
-- ✅ Get by primary key resolver
-- ✅ List with pagination resolver (limit/offset)
-- ✅ RecordBatch → GraphQL Value conversion
-- ✅ Field-level resolvers with parent context
-- ✅ Comprehensive integration test suite (10 tests)
-
-### ✅ Phase 4: Server (COMPLETE)
-- ✅ Axum HTTP server with async handlers
-- ✅ GraphQL Playground UI at `/graphql`
-- ✅ CORS support for cross-origin requests
-- ✅ Health check endpoint at `/health`
-- ✅ Automatic table path resolution (CSV, Delta, absolute paths)
-- ✅ Support for local Delta tables (no cloud needed!)
-- ✅ Full end-to-end workflow: CSV → Delta → GraphQL
-
-### Phase 5: Testing & Documentation
-- Unit tests for all modules
-- Integration tests
-- API documentation
-
-### Phase 6: Release
-- CI/CD setup
-- Release to crates.io
-- Example projects
 
 ## License
 
