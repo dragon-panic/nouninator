@@ -57,6 +57,38 @@ This creates:
 
 Goto http://localhost:4000/graphql to try out the playground.
 
+Example Query:
+
+```graphql
+query {
+  verb(verb_id:"3") {
+    verb_id
+    word
+    tense
+    type
+    definition
+    transitivity
+  }
+}
+```
+
+Responds with
+
+```json
+{
+  "data": {
+    "verb": {
+      "verb_id": "3",
+      "word": "be",
+      "tense": "base",
+      "type": "linking",
+      "definition": "To exist or occur",
+      "transitivity": "linking"
+    }
+  }
+}
+```
+
 ### Step 1: Build Nouninator
 
 Choose the build option that matches your use case:
